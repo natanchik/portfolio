@@ -25,11 +25,11 @@ myWorks.innerHTML = `<h2>MY WORKS</h2>`;
 const myWorksItems = document.createElement('div');
 myWorksItems.classList.add('my-works__items');
 myWorks.append(myWorksItems);
-const itemNames = ['Async Race', 'Minesweeper', 'CSS-Selector', 'Virtual keyboard', 'Shelter'];
-const itemImgs = ['race', 'minesweeper', 'selector', 'keyboard', 'shelter'];
+const itemNames = ['Toys', 'Async Race', 'Minesweeper', 'CSS-Selector', 'Virtual keyboard', 'Shelter'];
+const itemImgs = ['toys', 'race', 'minesweeper', 'selector', 'keyboard', 'shelter'];
 const itemLinks = [
+  'https://rs-toys.netlify.app/',
   'https://rolling-scopes-school.github.io/natanchik-JSFE2023Q1/async-race/',
-  '',
   '',
   '',
   'https://natanchik.github.io/virtual-keyboard/dist/',

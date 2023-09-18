@@ -68,12 +68,16 @@ body {
 .my-works__item {
   display: inline-block;
   width: 350px;
-  min-height: 250px;
+  height: 250px;
   background-size: contain;
   background-repeat: no-repeat;
 
   h2 {
     width: 100%;
+  }
+
+  &.toys {
+    background-image: url('./assets/images/toys.png');
   }
 
   &.race {
