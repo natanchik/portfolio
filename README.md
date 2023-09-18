@@ -1,1 +1,1 @@
-# Welcome to my [Portfoli](https://natanchik.github.io/portfolio/)
+# Welcome to my [Portfolio](https://natanchik.github.io/portfolio/)
