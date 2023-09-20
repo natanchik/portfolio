@@ -29,11 +29,11 @@ const itemNames = ['Toys', 'Async Race', 'Minesweeper', 'CSS-Selector', 'Virtual
 const itemImgs = ['toys', 'race', 'minesweeper', 'selector', 'keyboard', 'shelter'];
 const itemLinks = [
   'https://rs-toys.netlify.app/',
-  'https://rolling-scopes-school.github.io/natanchik-JSFE2023Q1/async-race/',
-  '',
-  '',
+  'https://natanchik.github.io/RSS-Tasks/async-race/',
+  'https://natanchik.github.io/RSS-Tasks/minesweeper/',
+  'https://natanchik.github.io/RSS-Tasks/rss-css-selectors/',
   'https://natanchik.github.io/virtual-keyboard/dist/',
-  '',
+  'https://natanchik.github.io/RSS-Tasks/shelter/',
 ];
 itemNames.forEach((name, ind) => {
   const link = document.createElement('a');
