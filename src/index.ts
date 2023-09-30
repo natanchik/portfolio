@@ -10,7 +10,7 @@ const myFoto = document.createElement('div');
 myFoto.classList.add('intro__my-foto');
 const introGreet = document.createElement('div');
 introGreet.classList.add('intro__greet');
-introGreet.innerHTML = `<h2>Hello!</h2><h1>I'm Natalia</h1><h1>Frontend Developer</h1>`;
+introGreet.innerHTML = `<h2>Hello! I'm Natalia</h2><h1>Frontend Developer</h1>`;
 intro.append(introGreet, myFoto);
 
 const aboutMe = document.createElement('div');
