@@ -34,7 +34,7 @@ body {
 
 .intro__my-foto {
   width: 350px;
-  background-image: url('./assets/images/foto2.png');
+  background-image: url('./assets/foto.png');
   background-size: contain;
   background-repeat: no-repeat;
   box-shadow:
@@ -67,9 +67,9 @@ body {
 
 .my-works__item {
   display: inline-block;
-  width: 350px;
-  height: 250px;
-  background-size: contain;
+  width: 300px;
+  height: 100px;
+  background-size: cover;
   background-repeat: no-repeat;
 
   h2 {
@@ -77,26 +77,10 @@ body {
   }
 
   &.toys {
-    background-image: url('./assets/images/toys.png');
+    background-image: url('./assets/toys.png');
   }
 
-  &.race {
-    background-image: url('./assets/images/race.png');
-  }
-
-  &.minesweeper {
-    background-image: url('./assets/images/minesweeper.png');
-  }
-
-  &.selector {
-    background-image: url('./assets/images/selector.png');
-  }
-
-  &.keyboard {
-    background-image: url('./assets/images/keyboard.png');
-  }
-
-  &.shelter {
-    background-image: url('./assets/images/shelter.png');
+  &.apps {
+    background-image: url('./assets/apps.jpg');
   }
 }

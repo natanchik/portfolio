@@ -25,13 +25,9 @@ myWorks.innerHTML = `<h2>MY WORKS</h2>`;
 const myWorksItems = document.createElement('div');
 myWorksItems.classList.add('my-works__items');
 myWorks.append(myWorksItems);
-const itemNames = ['E-Commerce Toys', 'Minesweeper', 'CSS-Selector'];
-const itemImgs = ['toys', 'minesweeper', 'selector'];
-const itemLinks = [
-  'https://rs-toys.netlify.app/',
-  'https://natanchik.github.io/RSS-Tasks/minesweeper/',
-  'https://natanchik.github.io/RSS-Tasks/rss-css-selectors/',
-];
+const itemNames = ['E-Commerce App Toys', 'My last apps'];
+const itemImgs = ['toys', 'apps'];
+const itemLinks = ['https://rs-toys.netlify.app/', 'https://natanchik.github.io/RSS-APPs/'];
 itemNames.forEach((name, ind) => {
   const link = document.createElement('a');
   link.href = itemLinks[ind];
