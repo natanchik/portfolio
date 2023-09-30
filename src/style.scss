@@ -15,8 +15,11 @@ body {
   color: $font;
   font-size: 2rem;
 
-  & h1 {    
-    text-shadow: 1px 1px 2px $font, 0 0 2em $font, 0 0 1em $font;    
+  & h1 {
+    text-shadow:
+      1px 1px 2px $font,
+      0 0 2em $font,
+      0 0 1em $font;
     border-bottom: 7px solid #6c81f7;
   }
 }
@@ -26,7 +29,7 @@ body {
   padding: 40px;
   margin: 0 auto;
 
-  & > * {    
+  & > * {
     padding: 50px 70px;
   }
 }
@@ -34,7 +37,7 @@ body {
 .intro {
   display: flex;
   justify-content: space-between;
-  border: 7px solid $border;  
+  border: 7px solid $border;
   box-shadow: 15px 15px 10px $border;
 
   & > * {
@@ -49,7 +52,7 @@ body {
   background-image: url('./assets/foto.png');
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 125px;  
+  border-radius: 125px;
 }
 
 .about-me {
@@ -62,7 +65,7 @@ body {
 
 .my-works {
   text-align: center;
-  border: 7px solid $border;   
+  border: 7px solid $border;
   box-shadow: 15px 15px 10px $border;
 
   & a {
@@ -75,13 +78,13 @@ body {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  justify-content: space-between;  
+  justify-content: space-between;
 
   h4:hover,
   h4:focus,
   h4:active {
     text-decoration: underline;
-    color:rgb(16, 29, 150);
+    color: rgb(16, 29, 150);
     opacity: 60%;
   }
 }
@@ -93,7 +96,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   border: 1px solid $border;
-  border-radius: 20px; 
+  border-radius: 20px;
   box-shadow: inset 2px 2px 2px $border;
 
   &:hover,
@@ -110,7 +113,6 @@ body {
     background-image: url('./assets/apps.jpg');
   }
 }
-
 
 .intro:hover,
 .my-works:hover {
