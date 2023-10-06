@@ -10,7 +10,7 @@ const myFoto = document.createElement('div');
 myFoto.classList.add('intro__my-foto');
 const introGreet = document.createElement('div');
 introGreet.classList.add('intro__greet');
-introGreet.innerHTML = `<h2>Hello! I'm Natalia</h2><h1>Frontend Developer</h1>`;
+introGreet.innerHTML = `<h2>Hello! I'm Natalia</h2><h1>Frontend Developer</h1><p>My GitHub <a href="https://github.com/natanchik">account</a></p><p>My <a href="https://www.linkedin.com/in/natalia-lebedeva-b0391b293/">LinkedIn</a></p>`;
 intro.append(introGreet, myFoto);
 
 const aboutMe = document.createElement('div');
@@ -35,4 +35,8 @@ itemNames.forEach((name, ind) => {
   myWorksItems.append(link);
 });
 
-wrapper.append(intro, aboutMe, myWorks);
+const myContacts = document.createElement('div');
+myContacts.classList.add('my-contacts');
+myContacts.innerHTML = `<h2>You can connect with me:</h2><p>Telegram: @natanchik</p><p>E-mail: nataliadaveng@gmail.com</p>`;
+
+wrapper.append(intro, aboutMe, myWorks, myContacts);

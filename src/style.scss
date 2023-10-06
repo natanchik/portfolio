@@ -22,6 +22,10 @@ body {
       0 0 1em $font;
     border-bottom: 7px solid #6c81f7;
   }
+
+  & a {
+    color: white;
+  }
 }
 
 .wrapper {
