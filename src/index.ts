@@ -37,6 +37,6 @@ itemNames.forEach((name, ind) => {
 
 const myContacts = document.createElement('div');
 myContacts.classList.add('my-contacts');
-myContacts.innerHTML = `<h2>You can connect with me:</h2><p>Telegram: @natanchik</p><p>E-mail: nataliadaveng@gmail.com</p>`;
+myContacts.innerHTML = `<h2>You can connect with me:</h2><p>Telegram: @natanchik1</p><p>E-mail: nataliadaveng@gmail.com</p>`;
 
 wrapper.append(intro, aboutMe, myWorks, myContacts);

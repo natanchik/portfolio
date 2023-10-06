@@ -34,7 +34,7 @@ body {
   margin: 0 auto;
 
   & > * {
-    padding: 50px 70px;
+    padding: 20px 70px 30px;
   }
 }
 
@@ -75,6 +75,10 @@ body {
   & a {
     color: $font;
     text-decoration: none;
+  }
+
+  & h4 {
+    margin-top: 10px;
   }
 }
 
@@ -121,7 +125,7 @@ body {
 .intro:hover,
 .my-works:hover {
   animation-duration: 0.5s;
-  animation-name: slide;
+  animation-name: scale-animation;
 }
 
 @keyframes slide {
@@ -139,15 +143,16 @@ h1:hover,
 h2:hover,
 h4:hover {
   animation-duration: 0.5s;
-  animation-name: rotation-foto;
+  animation-name: scale-animation;
 }
 
-@keyframes rotation-foto {
-  25% {
-    transform: rotate(1deg);
-  }
+.my-contacts {
+  padding-bottom: 20px;
+  padding-bottom: 0;
+}
 
-  75% {
-    transform: rotate(-1deg);
+@keyframes scale-animation {
+  50% {
+    transform: scale(1.02);
   }
 }
