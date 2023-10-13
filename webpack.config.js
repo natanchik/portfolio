@@ -1,6 +1,7 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -19,6 +20,9 @@ module.exports = {
       inject: 'body',
     }),
     new CleanWebpackPlugin(),
+    new CopyPlugin({
+      patterns: [{ from: path.join(__dirname, 'src', 'assets'), to: path.join(__dirname, 'dist', 'assets') }],
+    }),
   ],
   devServer: {
     static: path.resolve(__dirname, '..', 'dist'),
@@ -43,8 +47,8 @@ module.exports = {
         },
       },
       {
-        test: /\.(svg)$/i,
-        type: 'asset/resource',
+        test: /\.svg$/,
+        use: 'asset/resource',
         generator: {
           filename: 'assets/icons/[name][ext]',
         },

@@ -18,11 +18,33 @@ intro.append(introGreet, myFoto);
 
 const aboutMe = document.createElement('div');
 aboutMe.classList.add('about-me');
-const aboutMeText = `<p>Since my school years I have been interested in programming, the process of coding has always been interesting. When choosing a profession, I considered going in this direction, but it turned out differently. And a few years ago I realized that now is my second chance to become a developer. Now I am moving in the direction I dreamed of.</p>
-<p>I started my journey with Python, took a course on Deep Learning and then got to know web development. And I realized that I found my direction. Now my aspirations and desires are aimed at becoming a professional frontend developer.</p>`;
+const aboutMeText = `<p>I have been interested in programming all my life.\n
+I started my path in IT with Python, took a course in Deep Learning, and then got acquainted with web development.\n
+And I realized that I had found my direction.\n
+Now my main goal is to become a professional <strong>Frontend developer</strong>.</p>`;
 aboutMe.innerHTML = `<h2>ABOUT ME</h2>` + aboutMeText;
 
-// TODO: Add stack
+const myStack = document.createElement('div');
+myStack.classList.add('my-stack');
+myStack.innerHTML = `<h2>MY TECHNICAL STACK</h2>`;
+const stackItems = [
+  'React',
+  'JavaScript',
+  'TypeScript',
+  'HTML5',
+  'CSS3',
+  'SASS',
+  'Webpack',
+  'ESLint',
+  'Prettier',
+  'Jest',
+  'Docker',
+  'Python',
+  'Git',
+];
+stackItems.map((name) => {
+  myStack.innerHTML += `<div class="stack__item" style="background-image: url('./assets/icons/${name}.svg');"></div>`;
+});
 
 const myWorks = document.createElement('div');
 myWorks.classList.add('my-works');
@@ -30,17 +52,17 @@ myWorks.innerHTML = `<h2>MY WORKS</h2>`;
 const myWorksItems = document.createElement('div');
 myWorksItems.classList.add('my-works__items');
 myWorks.append(myWorksItems);
-const itemNames = ['E-Commerce App Toys', 'Hiring monsters', 'My last apps'];
-const itemImgs = ['toys', 'monsters', 'apps'];
+const itemNames = ['Hiring monsters', 'My last apps', 'E-Commerce App Toys'];
+const itemImgs = ['monsters', 'apps', 'toys'];
 const itemLinks = [
-  'https://rs-toys.netlify.app/',
   'https://creature-hiring.netlify.app/',
   'https://natanchik.github.io/RSS-APPs/',
+  'https://rs-toys.netlify.app/',
 ];
 itemNames.forEach((name, ind) => {
   const link = document.createElement('a');
   link.href = itemLinks[ind];
-  link.innerHTML = `<h4>${name}</h4><div class="my-works__item ${itemImgs[ind]}">`;
+  link.innerHTML = `<h4>${name}</h4><div class="my-works__item ${itemImgs[ind]}" style="background-image: url('./assets/${itemImgs[ind]}.png');"></div>`;
   myWorksItems.append(link);
 });
 
@@ -50,4 +72,4 @@ myContacts.innerHTML = `<h2>You can connect with me:</h2>
 <p>Telegram: <a href="https://t.me/natanchik1">natanchik1</a></p>
 <p>E-mail: <a href="mailto:nataliadaveng@gmail.com">nataliadaveng@gmail.com</a></p>`;
 
-wrapper.append(intro, aboutMe, myWorks, myContacts);
+wrapper.append(intro, aboutMe, myStack, myWorks, myContacts);
