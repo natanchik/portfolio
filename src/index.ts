@@ -22,11 +22,11 @@ const aboutMeText = `<p>I have been interested in programming all my life.\n
 I started my path in IT with Python, took a course in Deep Learning, and then got acquainted with web development.\n
 And I realized that I had found my direction.\n
 Now my main goal is to become a professional <strong>Frontend developer</strong>.</p>`;
-aboutMe.innerHTML = `<h2>ABOUT ME</h2>` + aboutMeText;
+aboutMe.innerHTML = `<h2>About me</h2>` + aboutMeText;
 
 const myStack = document.createElement('div');
 myStack.classList.add('my-stack');
-myStack.innerHTML = `<h2>MY TECHNICAL STACK</h2>`;
+myStack.innerHTML = `<h2>My technical stack</h2>`;
 const stackItems = [
   'React',
   'JavaScript',
@@ -48,7 +48,7 @@ stackItems.map((name) => {
 
 const myWorks = document.createElement('div');
 myWorks.classList.add('my-works');
-myWorks.innerHTML = `<h2>MY WORKS</h2>`;
+myWorks.innerHTML = `<h2>My works</h2>`;
 const myWorksItems = document.createElement('div');
 myWorksItems.classList.add('my-works__items');
 myWorks.append(myWorksItems);
