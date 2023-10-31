@@ -52,12 +52,12 @@ myWorks.innerHTML = `<h2>My works</h2>`;
 const myWorksItems = document.createElement('div');
 myWorksItems.classList.add('my-works__items');
 myWorks.append(myWorksItems);
-const itemNames = ['Hiring monsters', 'My last apps', 'E-Commerce App Toys'];
-const itemImgs = ['monsters', 'apps', 'toys'];
+const itemNames = ['E-Commerce App Toys', 'Hiring monsters', 'My last apps'];
+const itemImgs = ['toys', 'monsters', 'apps'];
 const itemLinks = [
+  'https://rs-toys.netlify.app/',
   'https://creature-hiring.netlify.app/',
   'https://natanchik.github.io/RSS-APPs/',
-  'https://rs-toys.netlify.app/',
 ];
 itemNames.forEach((name, ind) => {
   const link = document.createElement('a');
