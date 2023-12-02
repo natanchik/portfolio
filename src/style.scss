@@ -1,7 +1,7 @@
-$bg-top: rgb(218, 225, 244);
-$bg-bottom: rgb(239, 242, 249);
-$border: rgb(33, 67, 152, 0.7);
-$font: rgb(33, 67, 152);
+$bg-top: rgb(3, 32, 53);
+$bg-bottom: rgba(43, 87, 118, 0.9);
+$font: rgb(204, 204, 210);
+$border: $font;
 
 html {
   font-size: 10px;
@@ -215,7 +215,7 @@ h4:hover {
   left: calc(50vw - 150px);
   width: 300px;
   height: 300px;
-  z-index: 1;
+  z-index: 10;
   background-color: $bg-top;
   border: 5px solid $border;
   text-align: center;
