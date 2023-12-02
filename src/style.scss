@@ -1,5 +1,5 @@
-$bg-top: rgb(3, 32, 53);
-$bg-bottom: rgba(43, 87, 118, 0.9);
+$bg-top: rgb(3, 32, 53, 0.9);
+$bg-bottom: rgba(80, 129, 163, 0.9);
 $font: rgb(204, 204, 210);
 $border: $font;
 
@@ -11,7 +11,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-image: linear-gradient(135deg, $bg-top, $bg-bottom);
+  background-image: linear-gradient(145deg, $bg-bottom, $bg-top, $bg-top, $bg-bottom, $bg-top);
   color: $font;
   font-size: 2rem;
   font-family: 'Josefin Sans', sans-serif;
@@ -216,7 +216,7 @@ h4:hover {
   width: 300px;
   height: 300px;
   z-index: 10;
-  background-color: $bg-top;
+  background-image: linear-gradient(135deg, $bg-top, $bg-bottom, $bg-top, $bg-top, $bg-top, $bg-top);
   border: 5px solid $border;
   text-align: center;
   font-weight: 400;

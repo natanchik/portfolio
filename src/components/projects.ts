@@ -1,5 +1,3 @@
-import { modal } from './modal';
-
 export const projects = document.createElement('div');
 projects.classList.add('projects');
 projects.innerHTML = `<h2>My projects</h2>`;
@@ -22,7 +20,8 @@ itemNames.forEach((name, ind) => {
     project.innerHTML += `<h4>${name}</h4><div class="projects__item ${itemImgs[ind]}" style="background-image: url('./assets/${itemImgs[ind]}.png');"></div>`;
     for (const child of project.children) {
       child.addEventListener('click', () => {
-        modal.classList.add('active');
+        const modal = document.querySelector('.modal');
+        modal?.classList.add('active');
       });
     }
   } else {
@@ -30,5 +29,3 @@ itemNames.forEach((name, ind) => {
   }
   projectsItems.append(project);
 });
-
-projects.append(modal);
