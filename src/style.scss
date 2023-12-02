@@ -22,7 +22,6 @@ body {
       1px 1px 2px $border,
       0 0 2em $border,
       0 0 1em $border;
-    // border-bottom: 7px solid $border;
   }
 
   & a {
@@ -99,7 +98,7 @@ body {
   }
 }
 
-.my-stack {
+.stack {
   text-align: center;
 
   & .stack__item {
@@ -112,7 +111,7 @@ body {
   }
 }
 
-.my-works {
+.projects {
   text-align: center;
   border: 5px solid $border;
   box-shadow: 15px 15px 10px $border;
@@ -127,7 +126,7 @@ body {
   }
 }
 
-.my-works__items {
+.projects__items {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
@@ -142,7 +141,7 @@ body {
   }
 }
 
-.my-works__item {
+.projects__item {
   display: inline-block;
   width: 300px;
   height: 100px;
@@ -151,6 +150,7 @@ body {
   border: 1px solid $border;
   border-radius: 20px;
   box-shadow: inset 2px 2px 2px $border;
+  margin-bottom: 15px;
 
   &:hover,
   &:focus,
@@ -174,7 +174,7 @@ body {
 }
 
 .intro:hover,
-.my-works:hover {
+.projects:hover {
   animation-duration: 0.5s;
   animation-name: scale-animation;
 }
@@ -197,7 +197,7 @@ h4:hover {
   animation-name: scale-animation;
 }
 
-.my-contacts {
+.contacts {
   padding-bottom: 20px;
   padding-bottom: 0;
 }
@@ -205,5 +205,34 @@ h4:hover {
 @keyframes scale-animation {
   50% {
     transform: scale(1.02);
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: calc(50vh - 150px);
+  left: calc(50vw - 150px);
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+  background-color: $bg-top;
+  border: 5px solid $border;
+  text-align: center;
+  font-weight: 400;
+
+  &.active {
+    display: block;
+  }
+
+  & .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 2px;
+    width: 25px;
+    height: 20px;
+    border: 1px solid $border;
+    text-align: center;
   }
 }
