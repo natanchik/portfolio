@@ -1,6 +1,7 @@
 export const stack = document.createElement('div');
 stack.classList.add('stack');
-stack.innerHTML = `<h2>My technical stack</h2>`;
+stack.id = 'skills';
+stack.innerHTML = `<h2>Skills</h2><h4>The skills, tools and technologies I am good at:</h4>`;
 
 const stackItems = [
   'React',
@@ -19,5 +20,5 @@ const stackItems = [
 ];
 
 stackItems.map((name) => {
-  stack.innerHTML += `<div class="stack__item" style="background-image: url('./assets/icons/${name}.svg');"></div>`;
+  stack.innerHTML += `<div class="stack__item" ><div class="stack__img" style="background-image: url('./assets/icons/${name}.svg');"></div><p>${name}</p></div>`;
 });

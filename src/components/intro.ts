@@ -1,4 +1,5 @@
 export const intro = document.createElement('div');
+intro.id = 'intro';
 intro.classList.add('intro');
 
 const myFoto = document.createElement('div');

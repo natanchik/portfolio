@@ -1,6 +1,7 @@
 export const projects = document.createElement('div');
+projects.id = 'projects';
 projects.classList.add('projects');
-projects.innerHTML = `<h2>My projects</h2>`;
+projects.innerHTML = `<h2>My projects</h2><h4>Some of the noteworthy projects I have built:</h4>`;
 
 const projectsItems = document.createElement('div');
 projectsItems.classList.add('projects__items');

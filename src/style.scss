@@ -1,6 +1,6 @@
-$bg-top: rgb(3, 32, 53, 0.9);
-$bg-bottom: rgba(80, 129, 163, 0.9);
-$font: rgb(204, 204, 210);
+$bg-top: rgb(255, 255, 255);
+$bg-bottom: rgb(223, 235, 245);
+$font: rgb(53, 78, 91);
 $border: $font;
 
 html {
@@ -11,10 +11,10 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-image: linear-gradient(145deg, $bg-bottom, $bg-top, $bg-top, $bg-bottom, $bg-top);
   color: $font;
   font-size: 2rem;
   font-family: 'Josefin Sans', sans-serif;
+  background-color: white;
 
   & h1 {
     font-size: 3.2rem;
@@ -34,12 +34,15 @@ body {
 }
 
 .wrapper {
+  position: relative;
   max-width: 1000px;
-  padding: 40px;
+  padding: 60px 40px 0;
   margin: 0 auto;
+  background-color: $bg-bottom;
+  border-radius: 30px;
 
   & > * {
-    padding: 20px 70px 30px;
+    padding: 35px 70px 20px;
 
     @media (max-width: 515px) {
       padding: 20px 10px;
@@ -47,11 +50,47 @@ body {
   }
 }
 
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0;
+
+  & .header__wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bg-bottom;
+
+    & .header__logo {
+      text-align: center;
+      font-size: 24px;
+      border: 2px solid $font;
+      border-radius: 7px;
+      padding: 7px;
+    }
+
+    & .header__item {
+      list-style: none;
+      margin: 0 7px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 .intro {
   display: flex;
   justify-content: space-between;
-  border: 5px solid $border;
-  box-shadow: 15px 15px 10px $border;
+  background-color: $bg-top;
 
   & > * {
     display: inline-block;
@@ -70,8 +109,8 @@ body {
   background-image: url('./assets/foto.png');
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 125px;
-  border: 2px solid $border;
+
+  border: 10px solid $bg-top;
 
   @media (max-width: 760px) {
     order: -1;
@@ -90,6 +129,7 @@ body {
 
 .about-me {
   text-align: center;
+  background-color: $bg-bottom;
 
   p {
     text-align: left;
@@ -100,21 +140,25 @@ body {
 
 .stack {
   text-align: center;
+  background-color: $bg-top;
 
   & .stack__item {
     display: inline-block;
-    margin: 10px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 70px;
-    height: 70px;
+    margin: 12px;
+    text-align: center;
+
+    & .stack__img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 70px;
+      height: 70px;
+    }
   }
 }
 
 .projects {
   text-align: center;
-  border: 5px solid $border;
-  box-shadow: 15px 15px 10px $border;
+  background-color: $bg-bottom;
 
   & a {
     color: $font;
@@ -199,7 +243,7 @@ h4:hover {
 
 .contacts {
   padding-bottom: 20px;
-  padding-bottom: 0;
+  background-color: $bg-top;
 }
 
 @keyframes scale-animation {
@@ -235,4 +279,11 @@ h4:hover {
     border: 1px solid $border;
     text-align: center;
   }
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  height: fit-content;
+  background-color: $bg-bottom;
 }

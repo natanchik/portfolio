@@ -1,5 +1,6 @@
 export const aboutMe = document.createElement('div');
 aboutMe.classList.add('about-me');
+aboutMe.id = 'about';
 
 const aboutMeText = `<p>I have been interested in programming all my life.
 I started my path in IT with Python, got to know Deep Learning, and then got into web development.
