@@ -1,7 +1,6 @@
 $bg-top: rgb(255, 255, 255);
 $bg-bottom: rgb(223, 235, 245);
 $font: rgb(53, 78, 91);
-$border: $font;
 
 html {
   font-size: 10px;
@@ -19,9 +18,9 @@ body {
   & h1 {
     font-size: 3.2rem;
     text-shadow:
-      1px 1px 2px $border,
-      0 0 2em $border,
-      0 0 1em $border;
+      1px 1px 2px $font,
+      0 0 2em $font,
+      0 0 1em $font;
   }
 
   & a {
@@ -175,6 +174,13 @@ body {
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-around;
+  border: 1px dashed $bg-top;
+  padding-top: 10px;
+
+  & > h4,
+  h5 {
+    cursor: pointer;
+  }
 
   h4:hover,
   h4:focus,
@@ -191,16 +197,17 @@ body {
   height: 100px;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 1px solid $border;
+  border: 1px solid $bg-top;
   border-radius: 20px;
-  box-shadow: inset 2px 2px 2px $border;
+  box-shadow: inset 2px 2px 2px $bg-top;
   margin-bottom: 15px;
+  cursor: pointer;
 
-  &:hover,
-  &:focus,
-  &:active {
-    opacity: 70%;
-  }
+  // &:hover,
+  // &:focus,
+  // &:active {
+  //   opacity: 70%;
+  // }
 
   @media (max-width: 515px) {
     width: 250px;
@@ -218,7 +225,9 @@ body {
 }
 
 .intro:hover,
-.projects:hover {
+.stack:hover,
+.contacts:hover,
+.projects__item:hover {
   animation-duration: 0.5s;
   animation-name: scale-animation;
 }
@@ -260,8 +269,8 @@ h4:hover {
   width: 300px;
   height: 300px;
   z-index: 10;
-  background-image: linear-gradient(135deg, $bg-top, $bg-bottom, $bg-top, $bg-top, $bg-top, $bg-top);
-  border: 5px solid $border;
+  background-color: $bg-top;
+  border: 2px solid $font;
   text-align: center;
   font-weight: 400;
 
@@ -276,7 +285,7 @@ h4:hover {
     padding-top: 2px;
     width: 25px;
     height: 20px;
-    border: 1px solid $border;
+    border: 2px solid $font;
     text-align: center;
   }
 }
