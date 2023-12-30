@@ -18,7 +18,7 @@ const itemNames: Item[] = [
   },
 ];
 const itemImgs = ['toys', 'sneakers', 'graphql'];
-const itemLinks = ['', '', 'https://graphi-ql-ten.vercel.app/'];
+const itemLinks = ['', 'https://shop-vue-chi.vercel.app/', 'https://graphi-ql-ten.vercel.app/'];
 
 itemImgs.forEach((image, ind) => {
   const project = document.createElement('div');
