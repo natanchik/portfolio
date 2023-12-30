@@ -6,18 +6,23 @@ const projectsItems = document.createElement('div');
 projectsItems.classList.add('projects__items');
 projects.append(projectsItems);
 
-const itemNames = [
-  'E-Commerce App Toys (TypeScript)',
-  'Hiring monsters (React)',
-  'My last apps (JavaScript, TypeScript)',
-];
-const itemImgs = ['toys', 'monsters', 'apps'];
-const itemLinks = ['', 'https://creature-hiring.netlify.app/', 'https://natanchik.github.io/RSS-APPs/'];
+type Item = { title: string; stack: string };
 
-itemNames.forEach((name, ind) => {
+const itemNames: Item[] = [
+  { title: 'E-Commerce App Toys', stack: 'TypeScript, Commercetools' },
+  { title: 'Shop Sneakers', stack: 'Vue, Tailwind, Axios' },
+  {
+    title: 'GraphQl Sandbox',
+    stack: 'Next.js, Firebase, GraphQL, shadecn/ui, Tailwind',
+  },
+];
+const itemImgs = ['toys', 'sneakers', 'graphql'];
+const itemLinks = ['', '', 'https://graphi-ql-ten.vercel.app/'];
+
+itemImgs.forEach((image, ind) => {
   const project = document.createElement('div');
   if (ind === 0) {
-    project.innerHTML += `<h4>${name}</h4><div class="projects__item ${itemImgs[ind]}" style="background-image: url('./assets/${itemImgs[ind]}.png');"></div>`;
+    project.innerHTML += `<h4>${itemNames[ind].title}</h4><h5><i>${itemNames[ind].stack}</i></h5><div class="projects__item ${image}" style="background-image: url('./assets/${image}.png');"></div>`;
     for (const child of project.children) {
       child.addEventListener('click', () => {
         const modal = document.querySelector('.modal');
@@ -25,7 +30,7 @@ itemNames.forEach((name, ind) => {
       });
     }
   } else {
-    project.innerHTML += `<a href='${itemLinks[ind]}'><h4>${name}</h4><div class="projects__item ${itemImgs[ind]}" style="background-image: url('./assets/${itemImgs[ind]}.png');"></div></a>`;
+    project.innerHTML += `<a href='${itemLinks[ind]}'><h4>${itemNames[ind].title}</h4><h5><i>${itemNames[ind].stack}</i></h5><div class="projects__item ${image}" style="background-image: url('./assets/${image}.png');"></div></a>`;
   }
   projectsItems.append(project);
 });
