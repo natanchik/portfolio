@@ -4,13 +4,17 @@ stack.id = 'skills';
 stack.innerHTML = `<h2>Skills</h2><h4>The skills, tools and technologies I am good at:</h4>`;
 
 const stackItems = [
+  'Vue',
   'React',
+  'Next',
   'JavaScript',
   'TypeScript',
   'HTML5',
   'CSS3',
   'SASS',
+  'Tailwind',
   'Webpack',
+  'Vite',
   'ESLint',
   'Prettier',
   'Jest',
