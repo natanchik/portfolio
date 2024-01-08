@@ -10,19 +10,26 @@ projects.append(projectsItems);
 type Item = { title: string; stack: string };
 
 const itemNames: Item[] = [
-  { title: 'E-Commerce App Toys', stack: 'TypeScript, Commercetools' },
-  { title: 'Shop Sneakers', stack: 'Vue, Tailwind, Axios' },
   {
     title: 'GraphQl Sandbox',
     stack: 'Next.js, Firebase, GraphQL, shadecn/ui, Tailwind',
   },
+  { title: 'Creature Hiring', stack: 'React, Redux Toolkit, SCSS' },
+  { title: 'Sneakers Shop', stack: 'Vue, Tailwind, Axios' },
+
+  { title: 'E-Commerce App Toys', stack: 'TypeScript, Commercetools' },
 ];
-const itemImgs = ['toys', 'sneakers', 'graphql'];
-const itemLinks = ['', 'https://shop-vue-chi.vercel.app/', 'https://graphi-ql-ten.vercel.app/'];
+const itemImgs = ['graphql', 'creatures', 'sneakers', 'toys'];
+const itemLinks = [
+  'https://graphi-ql-ten.vercel.app/',
+  'https://creature-hiring.vercel.app/',
+  'https://shop-vue-chi.vercel.app/',
+  '',
+];
 
 itemImgs.forEach((image, ind) => {
   const project = document.createElement('div');
-  if (ind === 0) {
+  if (ind === 3) {
     project.innerHTML += `<h4>${itemNames[ind].title}</h4><h5><i>${itemNames[ind].stack}</i></h5><div class="projects__item ${image}" style="background-image: url('./assets/${image}.png');"></div>`;
     for (const child of project.children) {
       child.addEventListener('click', () => {
