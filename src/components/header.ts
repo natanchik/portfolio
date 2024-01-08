@@ -27,4 +27,11 @@ list.map((item) => {
   menu.append(li);
 });
 
-wrapper.append(logo, menu);
+const menuButton = document.createElement('button');
+menuButton.classList.add('header__btn');
+menuButton.textContent = 'Menu';
+menuButton.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+
+wrapper.append(logo, menu, menuButton);

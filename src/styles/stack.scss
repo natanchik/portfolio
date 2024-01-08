@@ -1,0 +1,19 @@
+@import './base.scss';
+
+.stack {
+  text-align: center;
+  background-color: $bg-top;
+
+  & .stack__item {
+    display: inline-block;
+    margin: 12px;
+    text-align: center;
+
+    & .stack__img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 70px;
+      height: 70px;
+    }
+  }
+}

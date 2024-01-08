@@ -1,0 +1,49 @@
+@import './base.scss';
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  background-color: $bg-top;
+
+  & > * {
+    display: inline-block;
+    height: fit-content;
+  }
+
+  @media (max-width: 760px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.intro__my-foto {
+  width: 250px;
+  height: 250px;
+  background-image: url('./assets/foto.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  border: 10px solid $bg-top;
+
+  @media (max-width: 760px) {
+    order: -1;
+  }
+
+  @media (max-width: 360px) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (max-width: 320px) {
+    width: 60vw;
+    height: 60vw;
+  }
+}
+
+.intro__my-foto:hover,
+h1:hover,
+h2:hover,
+h4:hover {
+  animation-duration: 0.5s;
+  animation-name: scale-animation;
+}

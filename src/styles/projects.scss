@@ -1,0 +1,64 @@
+@import './base.scss';
+
+.projects {
+  text-align: center;
+  background-color: $bg-bottom;
+
+  & a {
+    color: $font;
+    text-decoration: none;
+  }
+
+  & h4 {
+    margin-top: 10px;
+  }
+}
+
+.projects__items {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 1px dashed $bg-top;
+  padding-top: 10px;
+
+  & > h4,
+  h5 {
+    cursor: pointer;
+  }
+
+  h4:hover,
+  h4:focus,
+  h4:active {
+    text-decoration: underline;
+    color: rgb(16, 29, 150);
+    opacity: 60%;
+  }
+}
+
+.projects__item {
+  display: inline-block;
+  width: 300px;
+  height: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid $bg-top;
+  border-radius: 20px;
+  box-shadow: inset 2px 2px 2px $bg-top;
+  margin-bottom: 15px;
+  cursor: pointer;
+
+  @media (max-width: 515px) {
+    width: 250px;
+  }
+
+  @media (max-width: 375px) {
+    width: 200px;
+    height: 80px;
+  }
+
+  @media (max-width: 320px) {
+    width: 60vw;
+    height: 70px;
+  }
+}

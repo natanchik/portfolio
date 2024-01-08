@@ -1,0 +1,64 @@
+$bg-top: rgb(255, 255, 255);
+$bg-bottom: rgb(223, 235, 245);
+$font: rgb(53, 78, 91);
+
+html {
+  font-size: 10px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: $font;
+  font-size: 2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: white;
+
+  & h1 {
+    font-size: 3.2rem;
+    text-shadow:
+      1px 1px 2px $font,
+      0 0 2em $font,
+      0 0 1em $font;
+  }
+
+  & a {
+    color: $font;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 1.8rem;
+  }
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1000px;
+  padding: 60px 40px 0;
+  margin: 0 auto;
+  background-color: $bg-bottom;
+  border-radius: 30px;
+
+  & > * {
+    padding: 35px 70px 20px;
+
+    @media (max-width: 515px) {
+      padding: 35px 10px 20px;
+    }
+  }
+}
+
+@keyframes scale-animation {
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.intro:hover,
+.stack:hover,
+.contacts:hover,
+.projects__item:hover {
+  animation-duration: 0.5s;
+  animation-name: scale-animation;
+}

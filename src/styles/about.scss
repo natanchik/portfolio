@@ -1,0 +1,12 @@
+@import './base.scss';
+
+.about-me {
+  text-align: center;
+  background-color: $bg-bottom;
+
+  p {
+    text-align: left;
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+}
