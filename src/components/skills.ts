@@ -7,6 +7,7 @@ const stackItems = [
   'Vue',
   'React',
   'Next',
+  'ReduxToolkit',
   'JavaScript',
   'TypeScript',
   'HTML5',
@@ -15,12 +16,14 @@ const stackItems = [
   'Tailwind',
   'Webpack',
   'Vite',
+  'Jest',
+  'TestingLibrary',
   'ESLint',
   'Prettier',
-  'Jest',
-  'Docker',
-  'Python',
   'Git',
+  'Python',
+  'Docker',
+  'MySQL',
 ];
 
 stackItems.map((name) => {
