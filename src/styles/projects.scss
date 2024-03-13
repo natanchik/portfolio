@@ -2,7 +2,6 @@
 
 .projects {
   text-align: center;
-  background-color: $bg-bottom;
 
   & a {
     color: $font;
@@ -16,13 +15,12 @@
 
 .projects__items {
   display: flex;
-  width: 100%;
   flex-wrap: wrap;
   justify-content: space-around;
-  border: 1px dashed $bg-top;
+  gap: 25px;
   padding-top: 10px;
 
-  & > h4,
+  & h4,
   h5 {
     cursor: pointer;
   }
@@ -31,7 +29,7 @@
   h4:focus,
   h4:active {
     text-decoration: underline;
-    color: rgb(16, 29, 150);
+    color: rgba(0, 0, 255, 0.8);
     opacity: 60%;
   }
 }
@@ -39,12 +37,10 @@
 .projects__item {
   display: inline-block;
   width: 300px;
-  height: 100px;
+  height: 120px;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 1px solid $bg-top;
   border-radius: 20px;
-  box-shadow: inset 2px 2px 2px $bg-top;
   margin-bottom: 15px;
   cursor: pointer;
 

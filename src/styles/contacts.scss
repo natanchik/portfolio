@@ -2,5 +2,8 @@
 
 .contacts {
   padding-bottom: 20px;
-  background-color: $bg-top;
+
+  @media (max-width: 786px) {
+    text-align: center;
+  }
 }

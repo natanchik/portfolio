@@ -1,3 +1,3 @@
 export const footer = document.createElement('footer');
-footer.textContent = '2023';
+footer.innerHTML = '&copy; 2023';
 footer.classList.add('footer');

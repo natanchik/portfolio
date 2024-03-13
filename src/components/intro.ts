@@ -5,6 +5,10 @@ intro.classList.add('intro');
 const myFoto = document.createElement('div');
 myFoto.classList.add('intro__my-foto');
 
+const myFotoImg = document.createElement('div');
+myFotoImg.classList.add('intro__my-foto__img');
+myFoto.append(myFotoImg);
+
 const introGreet = document.createElement('div');
 introGreet.classList.add('intro__greet');
 introGreet.innerHTML = `<h2>Hello! I'm Natalia</h2>

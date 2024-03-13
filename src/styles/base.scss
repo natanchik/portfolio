@@ -1,6 +1,5 @@
-$bg-top: rgb(255, 255, 255);
-$bg-bottom: rgb(223, 235, 245);
-$font: rgb(53, 78, 91);
+$font: white;
+$bg-color: linear-gradient(300deg, rgba(0, 191, 255, 0.6), rgba(127, 7, 178, 0.6), rgba(0, 0, 255, 0.6));
 
 html {
   font-size: 10px;
@@ -13,7 +12,9 @@ body {
   color: $font;
   font-size: 2rem;
   font-family: 'Josefin Sans', sans-serif;
-  background-color: white;
+  background: $bg-color;
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
 
   & h1 {
     font-size: 3.2rem;
@@ -32,16 +33,26 @@ body {
   }
 }
 
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .wrapper {
   position: relative;
   max-width: 1000px;
-  padding: 60px 40px 0;
+  padding: 0 20px 0;
   margin: 0 auto;
-  background-color: $bg-bottom;
-  border-radius: 30px;
 
   & > * {
-    padding: 35px 70px 20px;
+    padding: 35px 30px 20px;
 
     @media (max-width: 515px) {
       padding: 35px 10px 20px;

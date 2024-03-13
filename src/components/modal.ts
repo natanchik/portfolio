@@ -8,7 +8,7 @@ modal.innerHTML = `<h2>Ooops...</h2>
 <p>or visit <a href='https://rs-toys.netlify.app/'>the failed site</a></p>`;
 
 const closeButton = document.createElement('div');
-closeButton.textContent = 'X';
+closeButton.textContent = 'x';
 closeButton.classList.add('close-button');
 closeButton.addEventListener('click', () => {
   modal.classList.remove('active');
