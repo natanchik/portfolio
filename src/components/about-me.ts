@@ -4,6 +4,7 @@ aboutMe.id = 'about';
 
 const aboutMeText = `<p>Passionate frontend developer with over a year of commercial experience.<br>
 Loves to code, participates in IT conferences and workshops, has spoken at meetup.<br>
-Develops adaptive and interactive applications and websites using React, Next.js, Vue.<br>
+Mentor and contributor RS School.<br>
+Develops adaptive and interactive applications and websites using React, Next.js.<br>
 Never stops learning. Ready for any technical challenge! 🌠</p>`;
 aboutMe.innerHTML = `<h2>About me</h2>` + aboutMeText;

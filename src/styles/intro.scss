@@ -20,8 +20,8 @@
 .intro__my-foto {
   padding: 15px;
   border-radius: 20px;
-  background: $bg-color;
-  opacity: 0.9;
+  background: $border;
+  box-shadow: 5px 5px 5px $shadow;
 
   &__img {
     width: 260px;

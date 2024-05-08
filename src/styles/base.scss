@@ -1,5 +1,8 @@
-$font: white;
-$bg-color: linear-gradient(300deg, rgba(0, 191, 255, 0.6), rgba(127, 7, 178, 0.6), rgba(0, 0, 255, 0.6));
+$font: #42575a;
+$font-contrast: #edf4f9;
+$bg-color: #edf4f9;
+$border: linear-gradient(300deg, #2b6684, #2b668460, #2b6684, #2b668460, #2b6684);
+$shadow: #2b668480;
 
 html {
   font-size: 10px;
@@ -13,8 +16,6 @@ body {
   font-size: 2rem;
   font-family: 'Josefin Sans', sans-serif;
   background: $bg-color;
-  background-size: 180% 180%;
-  animation: gradient-animation 18s ease infinite;
 
   & h1 {
     font-size: 3.2rem;
@@ -30,18 +31,6 @@ body {
 
   @media (max-width: 400px) {
     font-size: 1.8rem;
-  }
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
 
@@ -69,7 +58,7 @@ body {
 .intro:hover,
 .stack:hover,
 .contacts:hover,
-.projects__item:hover {
+.project__item:hover {
   animation-duration: 0.5s;
   animation-name: scale-animation;
 }
