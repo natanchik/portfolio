@@ -18,7 +18,7 @@ const itemNames: Item[] = [
   },
 ];
 const itemImgs = ['rs-school', 'code-wizards', 'graphql'];
-const itemLinks = ['https://rs.school/', 'https://code-wizards.team/', 'https://graphi-ql-ten.vercel.app/'];
+const itemLinks = ['https://rs.school/', 'https://code-wizards-site.vercel.app/', 'https://graphi-ql-ten.vercel.app/'];
 
 itemImgs.forEach((image, ind) => {
   const project = document.createElement('div');
