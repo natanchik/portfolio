@@ -10,7 +10,7 @@ projects.append(projectsItems);
 type Item = { title: string; stack: string };
 
 const itemNames: Item[] = [
-  { title: 'RS School', stack: 'React, Typescript' },
+  { title: 'RS School', stack: 'React, Typescript, FSD, Playwright, CodeRabbit, Jest' },
   { title: 'Code Wizards', stack: 'Next.js, TypeScript, Pixel Perfect, CSS Modules, Yandex.Metrica' },
   {
     title: 'GraphQl Sandbox',
