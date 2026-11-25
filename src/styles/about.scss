@@ -3,9 +3,20 @@
 .about-me {
   text-align: center;
 
-  p {
+  ul {
+    max-width: 75rem;
+    margin: 20px auto 0;
+    padding-left: 2em;
     text-align: left;
+  }
+
+  li {
+    margin-bottom: 0.8em;
+    padding-left: 0.35em;
+    line-height: 1.55;
+  }
+
+  li:last-child {
     margin-bottom: 0;
-    line-height: 1.6;
   }
 }

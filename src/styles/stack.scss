@@ -3,17 +3,39 @@
 .stack {
   text-align: center;
 
-  & .stack__item {
-    display: inline-block;
-    margin: 10px;
-    text-align: center;
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(82px, 1fr));
+    gap: 12px;
+    max-width: 860px;
+    margin: 24px auto 0;
+  }
 
-    & .stack__img {
-      background-size: cover;
-      background-repeat: no-repeat;
-      margin: 0 auto;
-      width: 70px;
-      height: 70px;
-    }
+  &__item {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 6px;
+    border: 1px solid rgba(43, 102, 132, 0.16);
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(43, 102, 132, 0.08);
+  }
+
+  &__img {
+    width: 48px;
+    height: 48px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__item p {
+    margin: 0;
+    font-size: 1.45rem;
+    line-height: 1.2;
   }
 }
