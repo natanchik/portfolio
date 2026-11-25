@@ -5,7 +5,7 @@ export const stack = createElement('div', {
   attributes: { id: 'skills' },
 });
 
-const skillNames = ['React', 'Next', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Jest', 'Python', 'Docker'];
+const skillNames = ['React', 'Next', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Jest', 'Python', 'Docker', 'AWS'];
 const skillsGrid = createElement('div', { className: 'stack__items' });
 
 const createSkillCard = (name: string): HTMLDivElement => {
