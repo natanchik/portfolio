@@ -1,3 +1,6 @@
-export const footer = document.createElement('footer');
-footer.innerHTML = `&copy; ${new Date().getFullYear()}`;
-footer.classList.add('footer');
+import { createElement } from './dom';
+
+export const footer = createElement('footer', {
+  className: 'footer',
+  textContent: `© ${new Date().getFullYear()}`,
+});

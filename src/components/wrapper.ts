@@ -1,2 +1,3 @@
-export const wrapper = document.createElement('div');
-wrapper.classList.add('wrapper');
+import { createElement } from './dom';
+
+export const wrapper = createElement('div', { className: 'wrapper' });

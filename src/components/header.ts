@@ -1,37 +1,40 @@
-export const header = document.createElement('header');
-header.classList.add('header');
+import { createElement } from './dom';
 
-const wrapper = document.createElement('div');
-wrapper.classList.add('header__wrapper');
-header.append(wrapper);
+export const header = createElement('header', { className: 'header' });
 
-const logo = document.createElement('a');
-logo.classList.add('header__logo');
-logo.href = '#intro';
-logo.innerHTML = '<b><i>Coder</i></b>';
+const wrapper = createElement('div', { className: 'header__wrapper' });
+const logoText = createElement('i', { textContent: 'Coder' });
+const logo = createElement('a', {
+  className: 'header__logo',
+  attributes: { href: '#intro' },
+  children: [createElement('b', { children: [logoText] })],
+});
 
-const menu = document.createElement('ul');
-menu.classList.add('header__menu');
-const list = [
+const menu = createElement('ul', { className: 'header__menu' });
+const menuItems = [
   ['about', 'About'],
   ['skills', 'Skills'],
   ['projects', 'Projects'],
   ['contacts', 'Contacts'],
 ];
 
-list.map((item) => {
-  const li = document.createElement('a');
-  li.classList.add('header__item');
-  li.href = `#${item[0]}`;
-  li.textContent = item[1];
-  menu.append(li);
+menuItems.forEach(([id, label]) => {
+  menu.append(
+    createElement('a', {
+      className: 'header__item',
+      textContent: label,
+      attributes: { href: `#${id}` },
+    }),
+  );
 });
 
-const menuButton = document.createElement('button');
-menuButton.classList.add('header__btn');
-menuButton.textContent = 'Menu';
+const menuButton = createElement('button', {
+  className: 'header__btn',
+  textContent: 'Menu',
+});
 menuButton.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
 
+header.append(wrapper);
 wrapper.append(logo, menu, menuButton);

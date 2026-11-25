@@ -1,18 +1,30 @@
-export const intro = document.createElement('div');
+import { createElement } from './dom';
+
+export const intro = createElement('div', { className: 'intro' });
 intro.id = 'intro';
-intro.classList.add('intro');
 
-const myFoto = document.createElement('div');
-myFoto.classList.add('intro__my-foto');
-
-const myFotoImg = document.createElement('div');
-myFotoImg.classList.add('intro__my-foto__img');
+const myFoto = createElement('div', { className: 'intro__my-foto' });
+const myFotoImg = createElement('div', { className: 'intro__my-foto__img' });
 myFoto.append(myFotoImg);
 
-const introGreet = document.createElement('div');
-introGreet.classList.add('intro__greet');
-introGreet.innerHTML = `<h2>Hello! I'm Natalia</h2>
-<h1>Frontend Developer</h1>
-<p>My GitHub: <a href="https://github.com/natanchik">natanchik</a></p>
-<p>My <a href="https://www.linkedin.com/in/natalia-lebedeva-b0391b293/">LinkedIn</a></p>`;
+const githubLink = createElement('a', {
+  textContent: 'natanchik',
+  attributes: { href: 'https://github.com/natanchik' },
+});
+const linkedInLink = createElement('a', {
+  textContent: 'LinkedIn',
+  attributes: { href: 'https://www.linkedin.com/in/natalia-lebedeva-b0391b293/' },
+});
+const introGreet = createElement('div', {
+  className: 'intro__greet',
+  children: [
+    createElement('h2', { textContent: "Hello! I'm Natalia" }),
+    createElement('h1', { textContent: 'Frontend Developer' }),
+    createElement('p', {
+      children: [document.createTextNode('My GitHub: '), githubLink],
+    }),
+    createElement('p', { children: [document.createTextNode('My '), linkedInLink] }),
+  ],
+});
+
 intro.append(introGreet, myFoto);

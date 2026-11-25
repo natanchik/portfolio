@@ -1,15 +1,36 @@
-export const modal = document.createElement('div');
-modal.classList.add('modal');
+import { createElement } from './dom';
 
-modal.innerHTML = `<h2>Ooops...</h2>
-<p>'Toys' deploy failed because backend has expired</p>
-<p>But you can watch our <br><a href='https://youtu.be/MKixRdbsk58'>'Toys' video presentation</a></p>
-<p>or check out <a href='https://github.com/kris-vadi/eCommerce-Application/tree/development'>the site's repository on GitHub</a></p>
-<p>or visit <a href='https://rs-toys.netlify.app/'>the failed site</a></p>`;
+export const modal = createElement('div', { className: 'modal' });
 
-const closeButton = document.createElement('div');
-closeButton.textContent = 'x';
-closeButton.classList.add('close-button');
+const videoLink = createElement('a', {
+  textContent: "'Toys' video presentation",
+  attributes: { href: 'https://youtu.be/MKixRdbsk58' },
+});
+const repositoryLink = createElement('a', {
+  textContent: "the site's repository on GitHub",
+  attributes: { href: 'https://github.com/kris-vadi/eCommerce-Application/tree/development' },
+});
+const siteLink = createElement('a', {
+  textContent: 'the failed site',
+  attributes: { href: 'https://rs-toys.netlify.app/' },
+});
+
+modal.append(
+  createElement('h2', { textContent: 'Ooops...' }),
+  createElement('p', { textContent: "'Toys' deploy failed because backend has expired" }),
+  createElement('p', {
+    children: [document.createTextNode('But you can watch our '), createElement('br'), videoLink],
+  }),
+  createElement('p', {
+    children: [document.createTextNode('or check out '), repositoryLink],
+  }),
+  createElement('p', { children: [document.createTextNode('or visit '), siteLink] }),
+);
+
+const closeButton = createElement('div', {
+  className: 'close-button',
+  textContent: 'x',
+});
 closeButton.addEventListener('click', () => {
   modal.classList.remove('active');
 });
